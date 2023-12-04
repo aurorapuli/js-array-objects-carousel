@@ -1,3 +1,6 @@
+
+// creo arr delle immagini
+
 const images = [ 
   { 
     image: 'img/01.webp',
@@ -29,3 +32,44 @@ const images = [
     text: 'Marvel\'s Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.', 
   } 
 ];
+
+// mi ricavo i bottoni da index
+
+const buttonNext =  document.getElementById('buttonnext');
+const buttonPrev = document.getElementById('buttonprev');
+let col = document.getElementById('col');
+
+// console.log(col);
+
+// creo il mio ciclo for
+
+    
+
+    buttonNext.addEventListener("click",
+        function(){
+            
+
+            for( let i = 0; i < images.length; i++){
+    
+                let imageIesimo = images[i];
+    
+                const imgItem = 
+                `
+                <div class="img">
+                    <img src="${imageIesimo.image}"alt="">
+                    <div class="text-img">
+                      <h3>${imageIesimo.title}</h3>
+                      <p>${imageIesimo.text}</p>
+                    </div>
+                </div>
+                `;
+    
+                col.innerHTML += imgItem;
+
+    
+            }
+    
+
+    });
+
+

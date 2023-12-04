@@ -11,7 +11,7 @@
 }
 
 
-.col{
+#col{
     position: relative;
 }
 
@@ -57,3 +57,4 @@
     text-align: right;
     color: white;
 }
+
