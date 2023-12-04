@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* struttura iniziale */
+.row{
+    width: 40%;
+    margin: 200px auto;
+}
+
+
+.col{
+    position: relative;
+}
+
+.fa-chevron-up{
+    position: absolute;
+    left: 50%;
+    top: 5px;
+    padding: 5px;
+    background-color:#cccccc ;
+    border-radius: 50%;
+}
+
+.fa-chevron-down{
+    position: absolute;
+    left: 50%;
+    bottom: 5px;
+    padding: 5px;
+    background-color:#cccccc ;
+    border-radius: 50%;
+}
+
+.img img{
+    width: 100%;
+    height: 300px;
+}
+
+
+/* classi generali */
+
+.items{
+    display: none;
+}
+
+
+.block{
+    display: block;
+}
