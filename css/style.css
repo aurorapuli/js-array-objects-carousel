@@ -41,12 +41,11 @@
 
 /* classi generali */
 
-.items{
+.img {
     display: none;
 }
 
-
-.block{
+.img.active {
     display: block;
 }
 

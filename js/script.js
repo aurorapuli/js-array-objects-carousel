@@ -35,41 +35,68 @@ const images = [
 
 // mi ricavo i bottoni da index
 
-const buttonNext =  document.getElementById('buttonnext');
+const buttonNext =  document.getElementById('button-next');
 const buttonPrev = document.getElementById('buttonprev');
 let col = document.getElementById('col');
 
-// console.log(col);
 
-// creo il mio ciclo for
+let activeItem = 0;
+
+let img = document.getElementsByClassName('img');
+
+console.log(img);
+
+
+images.forEach((element, i) => {
+    
+    const imgItem = 
+    `
+    <div class="img ${activeItem}">
+        <img src="${element.image}"alt="">
+        <div class="text-img">
+          <h3>${element.title}</h3>
+          <p>${element.text}</p>
+        </div>
+    </div>
+    `;
+
+    col.innerHTML += imgItem;
 
     
 
-    buttonNext.addEventListener("click",
-        function(){
-            
+    if(i === 0){
 
-            for( let i = 0; i < images.length; i++){
+        img[i].classList.add('active');
+        
+    }
+  
+    console.log(img[activeItem]);
     
-                let imageIesimo = images[i];
-    
-                const imgItem = 
-                `
-                <div class="img">
-                    <img src="${imageIesimo.image}"alt="">
-                    <div class="text-img">
-                      <h3>${imageIesimo.title}</h3>
-                      <p>${imageIesimo.text}</p>
-                    </div>
-                </div>
-                `;
-    
-                col.innerHTML += imgItem;
+    activeItem++;
 
-    
-            }
-    
 
-    });
+});
 
+
+buttonNext.addEventListener( "click",
+  function(){
+      img[activeItem].classList.remove('active');
+
+      activeItem++;
+
+      img[activeItem].classList.add('active');
+         console.log(img[activeItem]);
+
+});
+
+
+
+
+   
+
+
+         
+
+           
+ 
 
